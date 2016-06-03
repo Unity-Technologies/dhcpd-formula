@@ -26,6 +26,12 @@
 {%- if config.has_key('next_server') %}
 {{ intendation }}  next-server {{ config['next_server'] }};
 {%- endif %}
+{%- if config.has_key('default_lease_time') %}
+{{ intendation }}  default-lease-time {{ config['default_lease_time'] }};
+{%- endif %}
+{%- if config.has_key('max_lease_time') %}
+{{ intendation }}  max-lease-time {{ config['max_lease_time'] }};
+{%- endif %}
 {%- if config.has_key('routers') and config.routers is string %}
 {{ intendation }}  option routers {{ config.routers }};
 {%- elif config.has_key('routers') and config.routers is sequence %}
