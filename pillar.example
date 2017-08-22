@@ -1,5 +1,8 @@
 dhcpd:
     domain_name: example.org
+    domain_search:
+        - domain.example.org
+        - domain2.example.org
     domain_name_servers:
         - ns1.example.org
         - ns2.example.org
